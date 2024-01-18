@@ -13,26 +13,18 @@
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
   display: flex;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.10);
   background: #FFF;
   max-height: rem(80);
   height: 100%;
+  height: rem(80);
 
   @include max-md {
     padding: 12px 0;
   }
 
-  .container {
-    @include element-center;
-    @include justify-content-between;
-    @include container;
-  }
 
   .fixedHeader {
     display: none;
@@ -58,102 +50,90 @@
         padding: 12px 0;
       }
 
-      .container {
-        @include element-center;
-        @include justify-content-between;
-        @include container;
-      }
+
     }
   }
 
-  .leftSide {
+  .navbar {
     @include element-center;
-    gap: 40px;
+    @include justify-content-between;
 
-    .logoContainer {
+    .leftSide {
       @include element-center;
-      gap: 12px;
+      gap: 40px;
 
-      .logo {
-        width: 116px;
-        height: 47.979px;
+      .logoContainer {
+        @include element-center;
+        gap: 12px;
+
+        .logo {
+          width: 116px;
+          height: 47.979px;
+
+          @include max-md {
+            width: 81px;
+            height: 33.502px;
+          }
+        }
+      }
+
+      .nav {
+        @include element-center;
+        gap: 32px;
 
         @include max-md {
-          width: 81px;
-          height: 33.502px;
+          display: none;
         }
-      }
 
-      .logoText {
-        font-family: 'Sora', sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 24px;
-        /* 120% */
-        text-transform: capitalize;
-        background: var(--Gradient, linear-gradient(180deg, #3D5AFE 0%, #7C4DFF 121.03%));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
+        .navLink {
+          color: $--Gray-600;
+          font-family: 'Sora', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+          /* 150% */
+          transition: all 0.3s ease-in-out;
 
-    .nav {
-      @include element-center;
-      gap: 32px;
-
-      @include max-md {
-        display: none;
-      }
-
-      .navLink {
-        color: $--Gray-600;
-        font-family: 'Sora', sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px;
-        /* 150% */
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          color: rgba(0, 0, 0, 0.90);
+          &:hover {
+            color: rgba(0, 0, 0, 0.90);
+          }
         }
       }
     }
-  }
 
-  .rightSide {
+    .rightSide {
 
-    .btn_group {
-      display: flex;
-      gap: rem(12);
-      align-items: center;
+      .btn_group {
+        display: flex;
+        gap: rem(12);
+        align-items: center;
 
-      .login_button {
-        padding: rem(10) rem(16);
-        box-shadow: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
-        border-radius: rem(8);
-        border: rem(1) solid rgb(208, 213, 221);
-        cursor: pointer;
-        color: var(--extracted-1w3ko1f, rgba(52, 64, 84, 1));
-        font-size: rem(16);
-        font-weight: 600;
+        .login_button {
+          padding: rem(10) rem(16);
+          box-shadow: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
+          border-radius: rem(8);
+          border: rem(1) solid rgb(208, 213, 221);
+          cursor: pointer;
+          color: var(--extracted-1w3ko1f, rgba(52, 64, 84, 1));
+          font-size: rem(16);
+          font-weight: 600;
+        }
+
+        .signup_button {
+          padding: rem(10) rem(16);
+          box-shadow: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
+          border-radius: rem(8);
+          border: rem(1) solid rgb(208, 213, 221);
+          cursor: pointer;
+          color: #fff;
+          font-size: rem(16);
+          font-weight: 600;
+          background: #156fee;
+        }
       }
 
-      .signup_button {
-        padding: rem(10) rem(16);
-        box-shadow: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
-        border-radius: rem(8);
-        border: rem(1) solid rgb(208, 213, 221);
-        cursor: pointer;
-        color: #fff;
-        font-size: rem(16);
-        font-weight: 600;
-        background: rgb(21, 111, 238);
-      }
     }
-
   }
+
 }

@@ -1,10 +1,8 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: rem(96);
+  @include flex-column;
+  gap: 0;
   min-height: 100vh;
+
   .center {
     display: flex;
     justify-content: center;

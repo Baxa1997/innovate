@@ -1,0 +1,108 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9fafb;
+    position: relative;
+    padding: rem(96) 0;
+
+
+
+    .bannerDetails {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .titleBox {
+            display: flex;
+            flex-direction: column;
+            align-items: flex;
+            justify-content: flex-start;
+            max-width: rem(576);
+
+            .title {
+                font-size: rem(60);
+                line-height: rem(72);
+                font-weight: 600;
+                color: #101828;
+            }
+
+            .text {
+                font-size: rem(20);
+                line-height: rem(30);
+                font-weight: 400;
+                color: #475467;
+                margin-bottom: rem(48);
+                margin-top: rem(24);
+            }
+
+            .btn_group {
+                display: flex;
+                gap: rem(12);
+                align-items: center;
+
+                .order_button {
+                    padding: rem(12) rem(18);
+                    box-shadow: 0 1px 2px #1018280d;
+                    border-radius: rem(8);
+                    border: rem(1) solid rgb(208, 213, 221);
+                    cursor: pointer;
+                    color: var(--extracted-1w3ko1f, rgba(52, 64, 84, 1));
+                    font-size: rem(16);
+                    font-weight: 600;
+                    background: #fff;
+                }
+
+                .start_button {
+                    padding: rem(12) rem(18);
+                    box-shadow: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
+                    border-radius: rem(8);
+                    border: rem(1) solid rgb(208, 213, 221);
+                    cursor: pointer;
+                    color: #fff;
+                    font-size: rem(16);
+                    font-weight: 600;
+                    background: #156fee;
+                }
+            }
+        }
+
+        .imageBox {}
+    }
+}
+
+
+@media (max-width: 992px) {
+    .banner {
+        margin-top: rem(30);
+
+        .flower {
+            display: none;
+        }
+
+        .secondFlower {
+            display: none;
+        }
+
+
+        .bannerDetails {
+            width: 100%;
+            display: flex;
+            flex-direction: column !important;
+
+            .titleBox {
+                row-gap: rem(12);
+
+                .btn {
+                    padding: 10px;
+                    margin-top: rem(10) !important;
+                }
+            }
+
+            .imageBox {
+                margin: rem(32.44) 0;
+            }
+        }
+    }
+}
