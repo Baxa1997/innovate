@@ -1,74 +1,199 @@
 .banner {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // background-color: #f9fafb;
+    // position: relative;
+    // padding: rem(96) 0;
+
     align-items: center;
     background-color: #f9fafb;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: rem(0);
+    height: min-content;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 0;
     position: relative;
-    padding: rem(96) 0;
+    width: 100%;
 
 
 
-    .bannerDetails {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+    .banner_container {
         align-items: center;
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: rem(32);
+        height: 100vh;
+        justify-content: center;
+        overflow: visible;
+        padding: rem(96) 0;
+        position: relative;
+        transform: perspective(1200px);
+        width: 100%;
 
-        .titleBox {
+        .bannerDetails {
+            // width: 100%;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+
+            align-items: center;
             display: flex;
-            flex-direction: column;
-            align-items: flex;
-            justify-content: flex-start;
-            max-width: rem(576);
+            flex: 1 0 0px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: rem(64);
+            height: min-content;
+            justify-content: center;
+            max-width: rem(1280);
+            overflow: visible;
+            padding: 0 rem(32);
+            position: relative;
+            width: rem(1);
 
-            .title {
-                font-size: rem(60);
-                line-height: rem(72);
-                font-weight: 600;
-                color: #101828;
-            }
-
-            .text {
-                font-size: rem(20);
-                line-height: rem(30);
-                font-weight: 400;
-                color: #475467;
-                margin-bottom: rem(48);
-                margin-top: rem(24);
-            }
-
-            .btn_group {
+            .titleBox {
+                // display: flex;
+                // flex-direction: column;
+                // align-items: flex;
+                // justify-content: flex-start;
+                // max-width: rem(576);
+                align-items: flex-start;
                 display: flex;
-                gap: rem(12);
-                align-items: center;
+                flex: 1 0 0px;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                gap: rem(48);
+                height: min-content;
+                justify-content: flex-start;
+                overflow: visible;
+                padding: 0;
+                position: relative;
+                transform: perspective(1200px);
+                width: rem(1);
 
-                .order_button {
-                    padding: rem(12) rem(18);
-                    box-shadow: 0 1px 2px #1018280d;
-                    border-radius: rem(8);
-                    border: rem(1) solid rgb(208, 213, 221);
-                    cursor: pointer;
-                    color: var(--extracted-1w3ko1f, rgba(52, 64, 84, 1));
-                    font-size: rem(16);
-                    font-weight: 600;
-                    background: #fff;
+                .desc {
+                    align-items: flex-start;
+                    display: flex;
+                    flex: none;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    gap: rem(24);
+                    height: min-content;
+                    justify-content: flex-start;
+                    overflow: visible;
+                    padding: 0;
+                    position: relative;
+                    width: 100%;
+
+                    .title {
+                        font-size: rem(60);
+                        line-height: rem(72);
+                        font-weight: 600;
+                        color: #101828;
+                    }
+
+                    .text {
+                        font-size: rem(20);
+                        line-height: rem(30);
+                        font-weight: 400;
+                        color: #475467;
+                    }
                 }
 
-                .start_button {
-                    padding: rem(12) rem(18);
-                    box-shadow: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
-                    border-radius: rem(8);
-                    border: rem(1) solid rgb(208, 213, 221);
-                    cursor: pointer;
-                    color: #fff;
-                    font-size: rem(16);
-                    font-weight: 600;
-                    background: #156fee;
+
+                .btn_group {
+                    display: flex;
+                    gap: rem(12);
+                    align-items: center;
+
+                    .order_button {
+                        padding: rem(12) rem(18);
+                        box-shadow: 0 rem(1) rem(2) #1018280d;
+                        border-radius: rem(8);
+                        border: rem(1) solid rgb(208, 213, 221);
+                        cursor: pointer;
+                        color: var(--extracted-1w3ko1f, rgba(52, 64, 84, 1));
+                        font-size: rem(16);
+                        font-weight: 600;
+                        background: #fff;
+                    }
+
+                    .start_button {
+                        padding: rem(12) rem(18);
+                        box-shadow: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
+                        border-radius: rem(8);
+                        border: rem(1) solid rgb(208, 213, 221);
+                        cursor: pointer;
+                        color: #fff;
+                        font-size: rem(16);
+                        font-weight: 600;
+                        background: #156fee;
+                    }
+                }
+            }
+
+            .imageBox {
+                flex: 1 0 0px;
+                // min-height: rem(568);
+                height: 100%;
+                overflow: visible;
+                position: relative;
+                width: rem(1);
+
+                .phone {
+                    bottom: -1px;
+                    flex: none;
+                    height: rem(497);
+                    left: 0;
+                    overflow: visible;
+                    position: absolute;
+                    transition: 0.5s;
+                    // transform: perspective(1200px);
+                    width: rem(244);
+
+                    .background_phone {
+                        background-color: #fff;
+                        flex: none;
+                        inset: 11px 13px 12px 12px;
+                        overflow: hidden;
+                        position: absolute;
+                        z-index: -1;
+                    }
+
+                    .border_phone {
+                        inset: 0 0 2px;
+                        position: absolute;
+                    }
+
+                }
+
+
+                .admin {
+                    border: rem(4) solid #101828;
+                    border-radius: rem(10);
+                    bottom: rem(56);
+                    flex: none;
+                    height: rem(512);
+                    left: rem(94);
+                    overflow: visible;
+                    position: absolute;
+                    transform: perspective(1200px);
+                    width: rem(768);
+                    z-index: -99;
+                    transition: 0.5s;
+
+                    img {
+                        border-radius: rem(10);
+                    }
                 }
             }
         }
-
-        .imageBox {}
     }
 }
 

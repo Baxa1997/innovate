@@ -5,13 +5,23 @@ import { logo } from "@/utils/common";
 import Link from "next/link";
 import Container from "../Container";
 import { Box } from "@chakra-ui/react";
+import Image from "next/image";
 
 export default function HeaderContent() {
   return (
     <Container>
       <Box className={styles.navbar}>
         <div className={styles.leftSide}>
-          <Link href={"/"} className={styles.logoContainer}></Link>
+          <Link href={"/"} className={styles.logoContainer}>
+            <Image
+              src="/images/logo.svg"
+              alt="Vercel Logo"
+              className={styles.logo}
+              width={172}
+              height={24}
+              priority
+            />
+          </Link>
           <nav className={styles.nav}>
             <Link href={"/"} className={styles.navLink}>
               Home

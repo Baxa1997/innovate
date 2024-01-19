@@ -67,8 +67,8 @@
         gap: 12px;
 
         .logo {
-          width: 116px;
-          height: 47.979px;
+          width: rem(172);
+          height: rem(24);
 
           @include max-md {
             width: 81px;
