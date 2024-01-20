@@ -1,16 +1,67 @@
 "use client";
 
 import styles from "@/components/header/styles.module.scss";
-import { logo } from "@/utils/common";
 import Link from "next/link";
-import Container from "../Container";
-import { Box } from "@chakra-ui/react";
 import Image from "next/image";
+import {Animation} from "@/utils/animation";
+import {useMotionTemplate, useMotionValue, useScroll, useTransform,} from "framer-motion";
+import {useEffect, useRef} from "react";
+import {Box} from "@chakra-ui/react";
+
+
+let scrollThreshold = [0, 2];
 
 export default function HeaderContent() {
+  let {scrollY} = useScroll();
+  let scrollYOnDirectionChange = useRef(scrollY.get());
+  let lastPixelsScrolled = useRef();
+  let lastScrollDirection = useRef();
+  let pixelsScrolled = useMotionValue(0);
+  let transform = useTransform(pixelsScrolled, scrollThreshold, [0, -80]);
+  let transformMotion = useMotionTemplate`${transform}px`;
+
+  useEffect(() => {
+    function handleChange(latest) {
+      if (latest < 0) return;
+
+      let isScrollingDown = scrollY.getPrevious() - latest < 0;
+      let scrollDirection = isScrollingDown ? "down" : "up";
+      let currentPixelsScrolled = pixelsScrolled.get();
+      let newPixelsScrolled;
+
+      if (lastScrollDirection.current !== scrollDirection) {
+        lastPixelsScrolled.current = currentPixelsScrolled;
+        scrollYOnDirectionChange.current = latest;
+      }
+
+      if (isScrollingDown) {
+        newPixelsScrolled = Math.min(
+            lastPixelsScrolled.current +
+            (latest - scrollYOnDirectionChange.current),
+            scrollThreshold[1]
+        );
+      } else {
+        newPixelsScrolled = Math.max(
+            lastPixelsScrolled.current -
+            (scrollYOnDirectionChange.current - latest),
+            scrollThreshold[0]
+        );
+      }
+
+      pixelsScrolled.set(newPixelsScrolled);
+      lastScrollDirection.current = scrollDirection;
+    }
+
+    const scrollChange = scrollY.on("change", handleChange);
+    return () => scrollChange();
+  }, [pixelsScrolled, scrollY]);
+
+
   return (
-    <Container>
-      <Box className={styles.navbar}>
+      <Animation className={styles.framerHeader} style={{
+        y: transformMotion,
+      }}>
+        <Box className={styles.navbar}>
         <div className={styles.leftSide}>
           <Link href={"/"} className={styles.logoContainer}>
             <Image
@@ -49,7 +100,7 @@ export default function HeaderContent() {
             <button className={styles.signup_button}>Sign up</button>
           </div>
         </div>
-      </Box>
-    </Container>
+        </Box>
+      </Animation>
   );
 }

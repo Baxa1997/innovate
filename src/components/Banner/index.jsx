@@ -46,7 +46,7 @@ export function Banner() {
                     <div className={styles.border_phone}>
                       <Image
                         alt="admin_panel"
-                        src="/images/iphone_template.png"
+                        src="/images/iphone_template.svg"
                         fill={true}
                         loading="lazy"
                       />
