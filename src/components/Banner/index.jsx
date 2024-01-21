@@ -20,21 +20,21 @@ export function Banner() {
       <div className={styles.banner}>
         <div className={styles.banner_container}>
           <div className={styles.bannerDetails}>
-            <div className={styles.titleBox}>
-              <Animation variants={fadeinDown}>
-                <div className={styles.desc}>
-                  <h3 className={styles.title}>Innovative Fleet Management</h3>
-                  <p className={styles.text}>
-                    ELD Compliance, GPS Tracking, Dispatch Board and AI Dash
-                    Camera
-                  </p>
-                </div>
-                <div className={styles.btn_group}>
-                  <a className={styles.order_button}>Order Now</a>
-                  <a className={styles.start_button}>Get started</a>
-                </div>
-              </Animation>
-            </div>
+            {/* <div className={styles.titleBox}> */}
+            <Animation variants={fadeinDown} className={styles.titleBox}>
+              <div className={styles.desc}>
+                <h3 className={styles.title}>Innovative Fleet Management</h3>
+                <p className={styles.text}>
+                  ELD Compliance, GPS Tracking, Dispatch Board and AI Dash
+                  Camera
+                </p>
+              </div>
+              <div className={styles.btn_group}>
+                <a className={styles.order_button}>Order Now</a>
+                <a className={styles.start_button}>Get Started</a>
+              </div>
+            </Animation>
+            {/* </div> */}
             <div className={styles.imageBox}>
               <Animation variants={fadeinDownPhone}>
                 <div
