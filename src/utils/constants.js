@@ -38,7 +38,51 @@ export const fadeinDown = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { x: { stiffness: 6000, velocity: -100 } },
+    transition: { x: { stiffness: 120000, velocity: -100 } },
+  },
+};
+
+export const productFadeinDown = {
+  hidden: {
+    y: 140,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      delay: 0.4,
+    },
+  },
+};
+export const phoneFadeinDown = {
+  hidden: {
+    y: 200,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      delay: 0.8,
+    },
+  },
+};
+
+export const textFadeinDown = {
+  hidden: {
+    y: 80,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      delay: 0.2,
+    },
   },
 };
 
