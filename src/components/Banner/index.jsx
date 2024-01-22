@@ -1,18 +1,8 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import Container from "../Container/index.jsx";
-import {
-  AnimatePresenceMotion,
-  Animation,
-  MotionSection,
-} from "@/utils/animation";
-import {
-  fadeInUp,
-  fadeinDown,
-  fadeinDownPhone,
-  fadeinLeft,
-  fadeinRight,
-} from "@/utils/constants";
+import { Animation, MotionSection } from "@/utils/animation";
+import { fadeinDown, fadeinDownPhone } from "@/utils/constants";
+import CustomButton from "../CustomButton";
 
 export function Banner() {
   return (
@@ -20,7 +10,6 @@ export function Banner() {
       <div className={styles.banner}>
         <div className={styles.banner_container}>
           <div className={styles.bannerDetails}>
-            {/* <div className={styles.titleBox}> */}
             <Animation variants={fadeinDown} className={styles.titleBox}>
               <div className={styles.desc}>
                 <h3 className={styles.title}>Innovative Fleet Management</h3>
@@ -30,11 +19,18 @@ export function Banner() {
                 </p>
               </div>
               <div className={styles.btn_group}>
-                <a className={styles.order_button}>Order Now</a>
-                <a className={styles.start_button}>Get Started</a>
+                <CustomButton
+                  className={styles.signup_button}
+                  type="secondary"
+                  padding="12px 18px"
+                >
+                  Order Now
+                </CustomButton>
+                <a className={styles.start_button} padding="12px 18px">
+                  Get Started
+                </a>
               </div>
             </Animation>
-            {/* </div> */}
             <div className={styles.imageBox}>
               <Animation variants={fadeinDownPhone}>
                 <div

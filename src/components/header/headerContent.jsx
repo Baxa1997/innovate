@@ -14,6 +14,7 @@ import { useEffect, useRef, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import { BurgerIcon, CloseIcon } from "@/assets/icons";
 import BurgerContent from "./BurgerContent";
+import CustomButton from "../CustomButton";
 
 let scrollThreshold = [0, 2];
 
@@ -107,8 +108,12 @@ export default function HeaderContent() {
           </div>
           <div className={styles.rightSide}>
             <div className={styles.btn_group}>
-              <button className={styles.login_button}>Log in</button>
-              <button className={styles.signup_button}>Sign up</button>
+              <CustomButton className={styles.login_button} type="secondary">
+                Log in
+              </CustomButton>
+              <CustomButton className={styles.signup_button}>
+                Sign up
+              </CustomButton>
             </div>
             <div
               className={styles.icon_box}
