@@ -1,0 +1,28 @@
+.container {
+  @include container;
+  @include flex-column;
+  padding-top: rem(180);
+
+  .banner {
+    @include flex-column;
+
+    h1 {
+      font-size: rem(60);
+      line-height: rem(72);
+      font-weight: 600;
+      color: #101828;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      margin-top: rem(24);
+      font-weight: 400;
+      color: #000;
+      font-size: rem(20);
+      line-height: rem(30);
+    }
+  }
+}

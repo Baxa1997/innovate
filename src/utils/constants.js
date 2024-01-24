@@ -65,3 +65,17 @@ export const fadeinRight = {
     transition: { x: { stiffness: 6000, velocity: -100 } },
   },
 };
+
+export const fadeInUpScaleDown = {
+  hidden: {
+    y: 80,
+    opacity: 0,
+    scale: 1.4,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: { y: { stiffness: 6000, velocity: -500 } },
+  }
+}

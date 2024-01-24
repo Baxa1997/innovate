@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f49d7c-49dc-4535-af01-a06f437ef690" name="Changes" comment="" />
+    <list default="true" id="27f49d7c-49dc-4535-af01-a06f437ef690" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/bannerImages/partnershipBanner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/partnership/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PartnershipBanner/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PartnershipBanner/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/PartnerShipView/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/PartnerShipView/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/headerContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/headerContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,9 +30,9 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2b7N486sBWk9K66yhFUDAhOWmL5" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -34,15 +45,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/arabbektulanboyev/Documents/personal/freellance/zeromaxeld",
+    "last_opened_file_path": "/Users/arabbektulanboyev/Documents/personal/freellance/zeromaxeld/public/bannerImages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/bannerImages" />
+      <recent name="$PROJECT_DIR$/public/images" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,6 +70,8 @@
       <option name="presentableId" value="Default" />
       <updated>1705561962294</updated>
       <workItem from="1705561963672" duration="7429000" />
+      <workItem from="1705731504730" duration="11214000" />
+      <workItem from="1706014966922" duration="3523000" />
     </task>
     <servers />
   </component>
