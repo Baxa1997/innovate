@@ -16,7 +16,7 @@ import { BurgerIcon, CloseIcon } from "@/assets/icons";
 import BurgerContent from "./BurgerContent";
 import CustomButton from "../CustomButton";
 
-let scrollThreshold = [0, 50];
+let scrollThreshold = [0, 2];
 
 export default function HeaderContent() {
   let { scrollY } = useScroll();
