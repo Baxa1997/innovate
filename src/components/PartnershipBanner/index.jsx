@@ -1,12 +1,13 @@
 import styles from './styles.module.scss'
 import {Animation, MotionH1, MotionP, MotionSection} from "@/utils/animation";
-import {fadeInUpScaleDown} from "@/utils/constants";
+import {fadeInUpScaleDown, textFadeinDown} from "@/utils/constants";
 import Image from "next/image";
+import CustomButton from "@/components/CustomButton";
 
 export default function PartnershipBanner() {
     return (
-        <MotionSection className={styles.container}>
-            <div className={styles.banner}>
+        <MotionSection className={styles.banner}>
+            <div className={styles.container}>
                 <MotionH1 variants={fadeInUpScaleDown}>Our partnership is designed to <br/>
                     <span>deliver excellence</span></MotionH1>
                 <MotionP variants={{
@@ -27,11 +28,13 @@ export default function PartnershipBanner() {
                             delay: 0.1
                         }
                     }
-                }}>
-                    <button>Get in touch</button>
+                }} className={styles.button}>
+                    <CustomButton>Get in touch</CustomButton>
                 </Animation>
+                <Animation variants={textFadeinDown} className={styles.image}>
                 <Image width={1920} height={720} src={'/bannerImages/partnershipBanner.png'}
                        alt={'Our partnership is designed to deliver excellence'}/>
+                </Animation>
             </div>
         </MotionSection>
     )

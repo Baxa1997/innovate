@@ -1,10 +1,11 @@
-.container {
-  @include container;
+.banner {
   @include flex-column;
   padding-top: rem(180);
-
-  .banner {
+  padding-bottom: rem(96);
+  background-color: #f9fafb;
+  .container {
     @include flex-column;
+    @include container;
 
     h1 {
       font-size: rem(60);
@@ -23,6 +24,21 @@
       color: #000;
       font-size: rem(20);
       line-height: rem(30);
+    }
+
+    .button {
+      margin-top: rem(48);
+
+      a {
+        display: block;
+        width: fit-content;
+        padding: 16px 22px;
+        font-size: 18px;
+      }
+    }
+    img{
+        margin-top: rem(64);
+        width: 100%;
     }
   }
 }

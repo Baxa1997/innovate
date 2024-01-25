@@ -1,0 +1,164 @@
+.featuresCont {
+  place-content: center flex-start;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: column;
+  gap: 64px;
+  height: min-content;
+  overflow: hidden;
+  padding: 96px 0px;
+  position: relative;
+  width: 100%;
+
+
+  .container {
+    @include container;
+    @include flex-column;
+    gap: rem(64);
+    padding: 96px 0;
+
+    .titleCont {
+      align-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+      flex: none;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 20px;
+      height: min-content;
+      justify-content: flex-start;
+      max-width: 768px;
+      padding: 0;
+      position: relative;
+
+      h2 {
+        color: #000;
+        font-size: rem(36);
+        line-height: rem(44);
+      }
+
+      p {
+        color: #000;
+        font-size: rem(20);
+        line-height: rem(30);
+      }
+    }
+
+    .featuresWrapper {
+      align-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+      flex: none;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 64px;
+      height: min-content;
+      justify-content: flex-start;
+      max-width: 1280px;
+      padding: 0 32px;
+      position: relative;
+      width: 100%;
+
+      .features {
+        align-content: flex-start;
+        align-items: flex-start;
+        align-self: stretch;
+        display: flex;
+        flex: 1 0 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px;
+        height: auto;
+        justify-content: flex-start;
+        padding: 0;
+        position: relative;
+        transform: perspective(1200px);
+
+        .feature {
+          align-content: flex-start;
+          align-items: flex-start;
+          display: flex;
+          flex: 1 0 0px;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          gap: 20px;
+          height: min-content;
+          justify-content: flex-start;
+          min-width: 240px;
+          padding: 0;
+          position: relative;
+          width: 1px;
+        }
+      }
+
+      .featuresImages {
+        flex: 1 0 0px;
+        height: 512px;
+        position: relative;
+        width: 1px;
+
+        .admin {
+          border-radius: 12px;
+          flex: none;
+          height: 682px;
+          left: 64px;
+          position: absolute;
+          top: 0;
+          transform: perspective(1200px);
+          width: 1024px;
+          border-width: 6px;
+          border-color: #101828;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            object-position: center center;
+            object-fit: fill;
+            image-rendering: auto;
+          }
+        }
+
+        .phoneImage {
+          aspect-ratio: .49061031341552735 / 1;
+          flex: none;
+          height: var(--framer-aspect-ratio-supported, 640px);
+          left: -8px;
+          position: absolute;
+          top: 30%;
+          transform: perspective(1200px) translateY(-50%);
+          width: 314px;
+          z-index: 2;
+
+          .phone {
+            background-color: #fff;
+            flex: none;
+            inset: 14px 17px 16px 16px;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-position: center center;
+              object-fit: fill;
+            }
+          }
+
+          .border_phone {
+            image-rendering: pixelated;
+            flex-shrink: 0;
+            fill: rgba(0, 0, 0, 1);
+            color: rgba(0, 0, 0, 1);
+          }
+        }
+      }
+    }
+  }
+
+}

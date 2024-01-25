@@ -11,7 +11,6 @@ export const MotionSection = ({ children, ...props }) => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      layout="position"
       {...props}
     >
       {children}

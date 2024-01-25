@@ -1,0 +1,305 @@
+.tracking {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: rem(96);
+    height: min-content;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: rem(96) 0;
+    position: relative;
+    width: 100%;
+
+    @include max-lg {
+        gap: rem(48);
+        padding: rem(64) 0 0;
+    }
+
+    .textBox {
+        align-items: center;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: rem(20);
+        height: min-content;
+        justify-content: center;
+        overflow: visible;
+        padding: 0;
+        position: relative;
+        width: 100%;
+
+        .desc {
+            align-items: center;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: rem(12);
+            height: min-content;
+            justify-content: center;
+            max-width: rem(768);
+            overflow: visible;
+            padding: 0;
+            position: relative;
+            width: 100%;
+
+            .label {
+                font-size: rem(16);
+                line-height: rem(24);
+                font-weight: 600;
+                color: rgba(23, 92, 211, 1);
+                text-align: center;
+            }
+
+            .title {
+                font-size: rem(36);
+                line-height: rem(44);
+                font-weight: 600;
+                color: #101828;
+                text-align: center;
+                letter-spacing: -0.02em;
+            }
+        }
+
+        .text {
+            font-size: rem(20);
+            line-height: rem(30);
+            font-weight: 400;
+            color: #475467;
+            text-align: center;
+        }
+    }
+
+    .card {
+        align-items: center;
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 96px;
+        height: min-content;
+        justify-content: flex-start;
+        max-width: 1280px;
+        overflow: visible;
+        position: relative;
+        transform: perspective(1200px);
+        width: 100%;
+
+        @include max-lg {
+            flex-direction: column !important;
+        }
+
+        .content {
+            align-items: flex-start;
+            display: flex;
+            flex: 1 0 0px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 32px;
+            height: min-content;
+            justify-content: flex-start;
+            overflow: visible;
+            padding: 0;
+            position: relative;
+            transform: perspective(1200px);
+            width: 1px;
+
+            @include max-lg {
+                flex: none;
+                order: 0;
+                width: 100%;
+            }
+
+            .desc {
+                align-items: flex-start;
+                display: flex;
+                flex: none;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                gap: 16px;
+                height: min-content;
+                justify-content: flex-start;
+                overflow: visible;
+                padding: 0;
+                position: relative;
+                width: 100%;
+
+                .title {
+                    font-size: rem(30);
+                    line-height: rem(38);
+                    font-weight: 600;
+                    color: #101828;
+                    text-align: left;
+                    letter-spacing: -0.02em;
+                }
+
+                .text {
+                    font-size: rem(18);
+                    line-height: rem(28);
+                    font-weight: 400;
+                    color: #475467;
+                    text-align: left;
+                }
+            }
+
+        }
+
+        .imageBox {
+            flex: 1 0 0px;
+            height: 400px;
+            max-width: 560px;
+            min-width: 250px;
+            overflow: visible;
+            position: relative;
+            transform: perspective(1200px);
+            width: 1px;
+
+            @include max-lg {
+                flex: none;
+                order: 1;
+                width: 100%;
+            }
+
+            .main_image {
+                border: rem(4) solid #101828;
+                aspect-ratio: 1.5 / 1;
+                border-radius: 6px;
+                box-shadow: 0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e, 0 2.288533303243457px 2.288533303243457px -2.5px #00000029, 0 10px 10px -3.75px #00000010;
+                flex: none;
+                left: 50%;
+                min-width: 342px;
+                overflow: visible;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 86%;
+
+                @include max-lg {
+                    height: var(--framer-aspect-ratio-supported, 228px);
+                }
+
+                .track_image {
+                    border-radius: 6px;
+                    flex: none;
+                    inset: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    will-change: var(--framer-will-change-override, transform);
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: inherit;
+                        object-position: center;
+                        object-fit: cover;
+                        image-rendering: auto;
+                    }
+                }
+            }
+
+            .tracking_image {
+                box-shadow: 0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e, 0 2.288533303243457px 2.288533303243457px -2.5px #00000029, 0 10px 10px -3.75px #00000010;
+                flex: none;
+                height: auto;
+                position: absolute;
+
+
+
+                .img_position {
+                    position: absolute;
+                    border-radius: inherit;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    img {
+                        display: block;
+                        width: 100% !important;
+                        height: 100% !important;
+                        border-radius: inherit;
+                        object-position: center;
+                        object-fit: cover;
+                        image-rendering: auto;
+                    }
+                }
+            }
+
+            .tracking_1_2 {
+                @include max-lg {
+                    height: auto !important;
+                }
+            }
+
+            .tracking_1_3 {
+                @include max-lg {
+                    height: auto !important;
+                    width: 50% !important;
+                }
+            }
+
+            .tracking_1_4 {
+                @include max-lg {
+                    height: auto !important;
+                }
+            }
+
+            .tracking_3_2 {
+                @include max-lg {
+                    height: auto !important;
+                }
+            }
+
+            .tracking_2_3 {
+                @include max-lg {
+                    height: auto !important;
+                }
+            }
+
+            .tracking_4_2 {
+                @include max-lg {
+                    height: auto !important;
+                }
+            }
+
+            .tracking_2_2 {
+                @include max-lg {
+                    height: auto !important;
+                }
+            }
+        }
+    }
+
+
+
+    .coming {
+        border: rem(1) solid #b2ddff;
+        align-content: center;
+        align-items: center;
+        background-color: #eff8ff;
+        border-radius: rem(9999);
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: visible;
+        padding: rem(4) rem(12);
+        position: relative;
+        width: min-content;
+        font-size: rem(14);
+        line-height: rem(20);
+        font-weight: 500;
+        color: #101828;
+        text-align: center;
+        white-space: pre;
+        color: #175cd3;
+    }
+}
