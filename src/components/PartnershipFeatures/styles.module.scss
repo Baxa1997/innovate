@@ -8,7 +8,7 @@
   gap: 64px;
   height: min-content;
   overflow: hidden;
-  padding: 96px 0px;
+  padding: 96px 0;
   position: relative;
   width: 100%;
 
@@ -17,7 +17,6 @@
     @include container;
     @include flex-column;
     gap: rem(64);
-    padding: 96px 0;
 
     .titleCont {
       align-content: flex-start;
@@ -32,11 +31,18 @@
       max-width: 768px;
       padding: 0;
       position: relative;
-
+      @include max-md {
+        gap: 32px;
+        max-width: 1280px;
+        overflow: visible;
+        position: relative;
+        width: 100%;
+      }
       h2 {
         color: #000;
         font-size: rem(36);
         line-height: rem(44);
+        font-weight: 600;
       }
 
       p {
@@ -57,16 +63,18 @@
       height: min-content;
       justify-content: flex-start;
       max-width: 1280px;
-      padding: 0 32px;
       position: relative;
       width: 100%;
 
+      @include max-md {
+        flex-direction: column;
+      }
       .features {
         align-content: flex-start;
         align-items: flex-start;
         align-self: stretch;
         display: flex;
-        flex: 1 0 0px;
+        flex: 1 0 0;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 32px;
@@ -75,6 +83,12 @@
         padding: 0;
         position: relative;
         transform: perspective(1200px);
+        @include max-md {
+          align-self: unset;
+          flex: none;
+          height: min-content;
+          width: 100%;
+        }
 
         .feature {
           align-content: flex-start;
@@ -90,14 +104,61 @@
           padding: 0;
           position: relative;
           width: 1px;
+
+          .icon {
+            aspect-ratio: 1 / 1;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px #1018280d;
+            flex: none;
+            height: var(--framer-aspect-ratio-supported, 48px);
+            overflow: visible;
+            position: relative;
+            width: 48px;
+            border: 1px solid #eaecf0;;
+            @include align-items-center;
+            @include justify-content-center;
+          }
+
+          h3 {
+            color: #000;
+            font-size: rem(20);
+            line-height: rem(30);
+            font-weight: 600;
+          }
+
+          p {
+            color: #000;
+            font-size: rem(16);
+            line-height: rem(24);
+          }
         }
       }
 
       .featuresImages {
-        flex: 1 0 0px;
-        height: 512px;
-        position: relative;
-        width: 1px;
+
+        align-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 32px;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+
+        @include sm {
+          flex: 1 0 0;
+          height: 512px;
+          position: relative;
+          width: 1px;
+        }
+        @include max-md {
+          flex: none;
+          height: 512px;
+          position: relative;
+          width: 100%;
+        }
 
         .admin {
           border-radius: 12px;
@@ -110,7 +171,10 @@
           width: 1024px;
           border-width: 6px;
           border-color: #101828;
-
+          display: none;
+          @include sm {
+            display: block;
+          }
           img {
             display: block;
             width: 100%;
@@ -123,24 +187,36 @@
         }
 
         .phoneImage {
+          opacity: 1;
           aspect-ratio: .49061031341552735 / 1;
           flex: none;
           height: var(--framer-aspect-ratio-supported, 640px);
-          left: -8px;
-          position: absolute;
-          top: 30%;
-          transform: perspective(1200px) translateY(-50%);
+          overflow: visible;
           width: 314px;
-          z-index: 2;
+          position: relative;
 
+          @include sm {
+            aspect-ratio: .49061031341552735 / 1;
+            flex: none;
+            height: var(--framer-aspect-ratio-supported, 640px);
+            left: -8px;
+            position: absolute;
+            top: 30%;
+            transform: perspective(1200px) translateY(-50%);
+            width: 314px;
+            z-index: 2;
+          }
           .phone {
             background-color: #fff;
             flex: none;
             inset: 14px 17px 16px 16px;
             overflow: hidden;
             position: absolute;
+            @include sm {
+            position: absolute;
             z-index: -1;
 
+            }
             img {
               display: block;
               width: 100%;
@@ -151,10 +227,16 @@
           }
 
           .border_phone {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            @include sm {
             image-rendering: pixelated;
             flex-shrink: 0;
             fill: rgba(0, 0, 0, 1);
             color: rgba(0, 0, 0, 1);
+            }
           }
         }
       }
