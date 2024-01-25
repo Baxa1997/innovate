@@ -5,6 +5,11 @@ import Products from "@/components/Products";
 import Compliance from "@/components/Compliance";
 import Tracking from "@/components/Tracking";
 import Integrations from "@/components/Integrations";
+import Dispatch from "@/components/Dispatch";
+import Record from "@/components/Record";
+import Plan from "@/components/Plan";
+import ContactUs from "@/components/ContactUs";
+import Footer from "@/components/Footer";
 
 export default function Main() {
   return (
@@ -15,6 +20,11 @@ export default function Main() {
       <Compliance />
       <Tracking />
       <Integrations />
+      <Dispatch />
+      <Record />
+      <Plan />
+      <ContactUs />
+      <Footer />
     </main>
   );
 }
