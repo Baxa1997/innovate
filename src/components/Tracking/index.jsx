@@ -1,7 +1,7 @@
 import { Animation, MotionSection } from "@/utils/animation";
 import Container from "../Container";
 import styles from "./styles.module.scss";
-import { textFadeinDown } from "@/utils/constants";
+import { productFadeinDown, textFadeinDown } from "@/utils/constants";
 import { trackingData } from "./mock";
 import Image from "next/image";
 
@@ -31,7 +31,7 @@ export default function Tracking() {
         <>
           <Container>
             <MotionSection>
-              <Animation variants={textFadeinDown}>
+              <Animation variants={productFadeinDown}>
                 <div
                   className={styles.card}
                   style={{

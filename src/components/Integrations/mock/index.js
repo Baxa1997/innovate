@@ -36,4 +36,11 @@ export const integrationsData = [
     image: "/images/integrations/highway.webp",
     coming_soon: true,
   },
+  {
+    id: 5,
+    title: "Trucker Cloud",
+    text: "Allows tech companies to quickly connect with the industry's leading ELD's, so you can gather data and gain insight, faster.",
+    image: "/images/integrations/cloud.webp",
+    coming_soon: true,
+  },
 ];

@@ -21,7 +21,9 @@
     "framer-motion": "^10.16.1",
     "next": "13.4.19",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.49.3",
+    "react-scroll-parallax": "^3.4.5"
   },
   "devDependencies": {
     "husky": "^8.0.3",
