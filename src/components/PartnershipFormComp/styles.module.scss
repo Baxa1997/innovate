@@ -1,0 +1,287 @@
+.partnerShipForm {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: rem(64);
+  height: min-content;
+  justify-content: center;
+  overflow: hidden;
+  padding: rem(96) 0;
+  position: relative;
+  width: 100%;
+
+  @include max-md {
+    gap: rem(48);
+    padding: rem(64) 0 0;
+  }
+
+  .textBox {
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: rem(20);
+    height: min-content;
+    justify-content: center;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+    .desc {
+      align-items: center;
+      display: flex;
+      flex: none;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: rem(12);
+      height: min-content;
+      justify-content: center;
+      max-width: rem(768);
+      overflow: visible;
+      padding: 0;
+      position: relative;
+      width: 100%;
+
+      .label {
+        font-size: rem(16);
+        line-height: rem(24);
+        font-weight: 600;
+        color: rgba(23, 92, 211, 1);
+        text-align: left;
+      }
+
+      .title {
+        font-size: rem(36);
+        line-height: rem(44);
+        font-weight: 600;
+        color: #101828;
+        text-align: left;
+        letter-spacing: -0.02em;
+      }
+    }
+
+    .text {
+      font-size: rem(20);
+      line-height: rem(30);
+      font-weight: 400;
+      color: #475467;
+      text-align: left;
+    }
+  }
+
+  .formWrapper {
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: min-content;
+    justify-content: center;
+    max-width: 1280px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+
+    @include max-lg {
+      align-items: center;
+      flex-direction: column;
+      gap: 48px;
+      justify-content: flex-start;
+    }
+
+    .info {
+      align-content: center;
+      align-items: flex-start;
+      display: flex;
+      flex: 1 0 0px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 32px;
+      height: auto;
+      justify-content: flex-start;
+      max-width: 560px;
+      overflow: visible;
+      padding: 0;
+      position: relative;
+      transform: perspective(1200px);
+      width: 1px;
+
+      @include max-lg {
+        flex: none;
+        width: 100%;
+      }
+
+      .card {
+        align-content: center;
+        align-items: flex-start;
+        display: flex;
+        flex: 1 0 0px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 16px;
+        height: min-content;
+        justify-content: flex-start;
+        min-width: 240px;
+        overflow: visible;
+        padding: 0;
+        position: relative;
+        width: 1px;
+
+        .iconBox {
+          aspect-ratio: 1 / 1;
+          flex: none;
+          height: var(--framer-aspect-ratio-supported, 24px);
+          overflow: hidden;
+          position: relative;
+          width: 24px;
+
+          .icon {
+            inset: 3px 3px 5px 1px;
+            position: absolute;
+
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .body {
+          align-items: center;
+          display: flex;
+          flex: none;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          gap: 8px;
+          height: min-content;
+          justify-content: flex-start;
+          overflow: visible;
+          padding: 0;
+          position: relative;
+          width: 100%;
+
+          .title {
+            outline: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-shrink: 0;
+            transform: none;
+
+            p {
+              font-size: rem(20);
+              line-height: rem(30);
+              text-align: center;
+              font-weight: 600;
+              color: #101828;
+            }
+          }
+
+          .text {
+            outline: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-shrink: 0;
+            transform: none;
+
+
+            p {
+              font-size: rem(16);
+              line-height: rem(24);
+              text-align: center;
+              font-weight: 400;
+              color: #475467;
+            }
+          }
+        }
+
+        .footer {
+          align-items: center;
+          display: flex;
+          flex: none;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap: 8px;
+          height: min-content;
+          justify-content: center;
+          overflow: hidden;
+          padding: 0;
+          position: relative;
+          width: min-content;
+
+          .link {
+            outline: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-shrink: 0;
+            transform: none;
+            --framer-paragraph-spacing: 16px;
+            flex: none;
+            height: auto;
+            position: relative;
+            white-space: pre;
+            width: auto;
+
+            p {
+              font-size: rem(16);
+              line-height: rem(24);
+              text-align: center;
+              font-weight: 600;
+              color: #175cd3;
+
+            }
+          }
+        }
+      }
+    }
+
+
+    .form {
+      flex: 0 0 auto;
+      height: auto;
+      max-width: 480px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      font-family: Inter, sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: rgb(52, 64, 84);
+      padding: 40px 32px;
+      border-radius: 16px;
+      gap: 32px;
+      @include max-md {
+        max-width: 100%;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px 14px;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: rgb(16, 24, 40);
+        border: 1px solid rgb(208, 213, 221);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+      }
+
+    }
+  }
+
+}
