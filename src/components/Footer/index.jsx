@@ -22,7 +22,7 @@ export default function Footer() {
                 <div className={styles.logo}>
                   <Image
                     alt="logo"
-                    src="/images/logo.svg"
+                    src="/images/logo.png"
                     width={231}
                     height={31}
                   />

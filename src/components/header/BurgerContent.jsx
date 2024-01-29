@@ -23,7 +23,7 @@ export default function BurgerContent() {
         <Link href={"/#Contact"} className={styles.navLink}>
           Contact
         </Link>
-        <Link href={"/#Download"} className={styles.navLink}>
+        <Link href={"/#DownloadView"} className={styles.navLink}>
           Download
         </Link>
       </nav>
