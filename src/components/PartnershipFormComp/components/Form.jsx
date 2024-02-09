@@ -1,14 +1,12 @@
 "use client";
-import * as React from "react";
-import styles from "../styles.module.scss";
-import { Button, ChakraProvider } from "@chakra-ui/react";
-import { useForm } from "react-hook-form";
 import FormInput from "@/components/Input/FormInput";
 import FormRow from "@/components/Input/FormRow";
 import FormTextarea from "@/components/Input/FormTextarea";
-import { sendMessage } from "../../../../bots/telegramBot";
-import { useState } from "react";
 import { sendContactForm } from "@/lib/api";
+import { Button, ChakraProvider } from "@chakra-ui/react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import styles from "../styles.module.scss";
 
 export default function PartnershipForm() {
     const { control, handleSubmit } = useForm();
@@ -18,9 +16,8 @@ export default function PartnershipForm() {
         setLoading(true)
         console.log(data);
         const chatId = '-4110982264';
-        const messageText = `Name: ${data.name}\nCompany Name: ${data.company_name}\nEmail: ${data.email}\nPhone: ${data.phone}\nPartnership Purpose: ${data.partnership_purpose}`;
-        sendMessage(chatId, messageText).then((res) => {
-            console.log("res", data)
+        const messageText = `Title: Partnership \nName: ${data.name}\nCompany Name: ${data.company_name}\nEmail: ${data.email}\nPhone: ${data.phone}\nPartnership Purpose: ${data.partnership_purpose}`;
+        sendPartnerShipMessage(chatId, messageText).then(() => {
             sendContactForm(data)
             setLoading(false);
         }).catch(() => {

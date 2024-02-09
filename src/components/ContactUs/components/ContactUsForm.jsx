@@ -1,28 +1,41 @@
 "use client";
 import * as React from "react";
+import {useState} from "react";
 import styles from "../styles.module.scss";
-import { ChakraProvider, Checkbox } from "@chakra-ui/react";
-import { useForm } from "react-hook-form";
+import {Button, ChakraProvider, Checkbox} from "@chakra-ui/react";
+import {useForm} from "react-hook-form";
 import FormInput from "@/components/Input/FormInput";
 import FormRow from "@/components/Input/FormRow";
 import FormTextarea from "@/components/Input/FormTextarea";
 import CustomButton from "@/components/CustomButton";
+import {sendChatMessage} from "../../../../bots/telegramBot";
 import { sendContactForm } from "../../../lib/api";
 
 export default function ContactUsForm() {
   const { control, handleSubmit } = useForm();
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const onSubmit = async (data) => {
+        setLoading(true)
+        const chatId = '-4110982264';
+        const messageText = `Title: Chat \nName: ${data.name}\nCompany Name: ${data.company_name}\nEmail: ${data.email}\nPhone: ${data.phone}\nTruck Amount: ${data.amount}\nMessage: ${data.message}`;
 
-  const onSubmit = async (values) => {
-    try {
-      await sendContactForm(values);
-    } catch (error) {
-      console.log(error.message)
+        try {
+            await sendContactForm(values);
+            await sendChatMessage(chatId, messageText).then(() => {
+                setLoading(false);
+            }).catch(() => {
+                setError('Failed to send message')
+                setLoading(false);
+            });
+        } catch (error) {
+            console.log(error.message)
+        }
     }
-  };
 
   return (
     <ChakraProvider>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <FormRow
           label="Name"
           color="#344054"
