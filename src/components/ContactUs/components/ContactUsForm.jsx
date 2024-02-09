@@ -9,22 +9,30 @@ import FormRow from "@/components/Input/FormRow";
 import FormTextarea from "@/components/Input/FormTextarea";
 import CustomButton from "@/components/CustomButton";
 import {sendChatMessage} from "../../../../bots/telegramBot";
+import { sendContactForm } from "../../../lib/api";
 
 export default function ContactUsForm() {
   const { control, handleSubmit } = useForm();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
         setLoading(true)
         const chatId = '-4110982264';
-        const messageText = `Title: Chat \nName: ${data.name}\nCompany Name: ${data.company_name}\nEmail: ${data.email}\nPhone: ${data.phone}\nTruck Amount: ${data.truck_amount}\nMessage: ${data.message}`;
-        sendChatMessage(chatId, messageText).then(() => {
-            setLoading(false);
-        }).catch(() => {
-            setError('Failed to send message')
-            setLoading(false);
-        });
+        const messageText = `Title: Chat \nName: ${data.name}\nCompany Name: ${data.company_name}\nEmail: ${data.email}\nPhone: ${data.phone}\nTruck Amount: ${data.amount}\nMessage: ${data.message}`;
+
+        try {
+            await sendContactForm(values);
+            await sendChatMessage(chatId, messageText).then(() => {
+                setLoading(false);
+            }).catch(() => {
+                setError('Failed to send message')
+                setLoading(false);
+            });
+        } catch (error) {
+            console.log(error.message)
+        }
     }
+
   return (
     <ChakraProvider>
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
@@ -76,7 +84,7 @@ export default function ContactUsForm() {
             marginBottom: "6px",
           }}
         >
-          <FormInput control={control} name="truck_amount" />
+          <FormInput control={control} name="amount" />
         </FormRow>
         <FormRow
           label="Message"
@@ -95,10 +103,10 @@ export default function ContactUsForm() {
           }}
           boxClassName={styles.checkbox}
         >
-          <Checkbox required />
+          <Checkbox />
           <p>You agree to our friendly privacy policy.</p>
         </FormRow>
-            <Button background={'#fff'} border={'1px solid rgb(208, 213, 221)'} color={'#344054'} padding="12px 18px" isLoading={loading} type='submit'>Submit</Button>
+        <CustomButton onClick={handleSubmit(onSubmit)} padding="12px 18px">Submit</CustomButton>
       </form>
     </ChakraProvider>
   );
