@@ -1,16 +1,17 @@
 "use client";
 import * as React from "react";
 import styles from "../styles.module.scss";
-import {Button, ChakraProvider} from "@chakra-ui/react";
-import {useForm} from "react-hook-form";
+import { Button, ChakraProvider } from "@chakra-ui/react";
+import { useForm } from "react-hook-form";
 import FormInput from "@/components/Input/FormInput";
 import FormRow from "@/components/Input/FormRow";
 import FormTextarea from "@/components/Input/FormTextarea";
-import {sendMessage} from "../../../../bots/telegramBot";
-import {useState} from "react";
+import { sendMessage } from "../../../../bots/telegramBot";
+import { useState } from "react";
+import { sendContactForm } from "@/lib/api";
 
 export default function PartnershipForm() {
-    const {control, handleSubmit} = useForm();
+    const { control, handleSubmit } = useForm();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const onSubmit = (data) => {
@@ -18,7 +19,9 @@ export default function PartnershipForm() {
         console.log(data);
         const chatId = '-4110982264';
         const messageText = `Name: ${data.name}\nCompany Name: ${data.company_name}\nEmail: ${data.email}\nPhone: ${data.phone}\nPartnership Purpose: ${data.partnership_purpose}`;
-        sendMessage(chatId, messageText).then(() => {
+        sendMessage(chatId, messageText).then((res) => {
+            console.log("res", data)
+            sendContactForm(data)
             setLoading(false);
         }).catch(() => {
             setError('Failed to send message')
@@ -36,7 +39,7 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormInput control={control} name="name"/>
+                    <FormInput control={control} name="name" />
                 </FormRow>
                 <FormRow
                     label="Company Name"
@@ -46,7 +49,7 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormInput control={control} name="company_name"/>
+                    <FormInput control={control} name="company_name" />
                 </FormRow>
                 <FormRow
                     label="Email"
@@ -56,7 +59,7 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormInput control={control} name="email"/>
+                    <FormInput control={control} name="email" />
                 </FormRow>
                 <FormRow
                     label="Phone Number"
@@ -66,7 +69,7 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormInput control={control} name="phone"/>
+                    <FormInput control={control} name="phone" />
                 </FormRow>
                 <FormRow
                     label="How are you interested in partnering with us?"
@@ -76,11 +79,11 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormTextarea control={control} name="partnership_purpose"/>
+                    <FormTextarea control={control} name="partnership_purpose" />
                 </FormRow>
 
                 <Button backgroundColor={'rgb(21, 112, 239)'} color={'white'} width={'full'} type='submit'
-                        padding="12px 18px" isLoading={loading}>Submit</Button>
+                    padding="12px 18px" isLoading={loading}>Submit</Button>
                 {error && <p>{error}</p>}
             </form>
         </ChakraProvider>
