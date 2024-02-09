@@ -7,13 +7,22 @@ import FormInput from "@/components/Input/FormInput";
 import FormRow from "@/components/Input/FormRow";
 import FormTextarea from "@/components/Input/FormTextarea";
 import CustomButton from "@/components/CustomButton";
+import { sendContactForm } from "../../../lib/api";
 
 export default function ContactUsForm() {
   const { control, handleSubmit } = useForm();
 
+  const onSubmit = async (values) => {
+    try {
+      await sendContactForm(values);
+    } catch (error) {
+      console.log(error.message)
+    }
+  };
+
   return (
     <ChakraProvider>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <FormRow
           label="Name"
           color="#344054"
@@ -22,7 +31,7 @@ export default function ContactUsForm() {
             marginBottom: "6px",
           }}
         >
-          <FormInput control={control} name="email" />
+          <FormInput control={control} name="name" />
         </FormRow>
         <FormRow
           label="Company Name"
@@ -32,7 +41,7 @@ export default function ContactUsForm() {
             marginBottom: "6px",
           }}
         >
-          <FormInput control={control} name="email" />
+          <FormInput control={control} name="company_name" />
         </FormRow>
         <FormRow
           label="Email"
@@ -52,7 +61,7 @@ export default function ContactUsForm() {
             marginBottom: "6px",
           }}
         >
-          <FormInput control={control} name="email" />
+          <FormInput control={control} name="phone" />
         </FormRow>
         <FormRow
           label="Amount of Trucks"
@@ -62,7 +71,7 @@ export default function ContactUsForm() {
             marginBottom: "6px",
           }}
         >
-          <FormInput control={control} name="email" />
+          <FormInput control={control} name="amount" />
         </FormRow>
         <FormRow
           label="Message"
@@ -72,7 +81,7 @@ export default function ContactUsForm() {
             marginBottom: "6px",
           }}
         >
-          <FormTextarea control={control} name="email" />
+          <FormTextarea control={control} name="message" />
         </FormRow>
         <FormRow
           labelStyle={{
@@ -84,7 +93,7 @@ export default function ContactUsForm() {
           <Checkbox />
           <p>You agree to our friendly privacy policy.</p>
         </FormRow>
-        <CustomButton padding="12px 18px">Submit</CustomButton>
+        <CustomButton onClick={handleSubmit(onSubmit)} padding="12px 18px">Submit</CustomButton>
       </form>
     </ChakraProvider>
   );
