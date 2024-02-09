@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import PartnershipForm from "@/components/PartnershipFormComp/components/Form";
 
 export default function PartnershipFormComp() {
+
     return (
         <div className={styles.partnerShipForm}>
             <Container>
