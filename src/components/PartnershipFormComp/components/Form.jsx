@@ -3,15 +3,27 @@ import FormInput from "@/components/Input/FormInput";
 import FormRow from "@/components/Input/FormRow";
 import FormTextarea from "@/components/Input/FormTextarea";
 import { sendContactForm } from "@/lib/api";
-import { Button, ChakraProvider } from "@chakra-ui/react";
+import { Button, ChakraProvider, useToast } from "@chakra-ui/react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "../styles.module.scss";
+import { sendPartnerShipMessage } from "../../../../bots/telegramBot";
 
 export default function PartnershipForm() {
-    const { control, handleSubmit } = useForm();
+    const { control, handleSubmit, reset } = useForm();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const toast = useToast();
+
+
+    const successToats = () => {
+        toast({
+            title: "Your application has been sent successfully",
+            position: "top-right",
+            isClosable: true,
+            status: "success",
+        });
+    };
     const onSubmit = (data) => {
         setLoading(true)
         console.log(data);
@@ -20,6 +32,8 @@ export default function PartnershipForm() {
         sendPartnerShipMessage(chatId, messageText).then(() => {
             sendContactForm(data)
             setLoading(false);
+            reset({})
+            successToats()
         }).catch(() => {
             setError('Failed to send message')
             setLoading(false);
