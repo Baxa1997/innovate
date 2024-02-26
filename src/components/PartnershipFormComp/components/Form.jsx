@@ -1,25 +1,39 @@
 "use client";
-import * as React from "react";
-import {useState} from "react";
-import styles from "../styles.module.scss";
-import {Button, ChakraProvider} from "@chakra-ui/react";
-import {useForm} from "react-hook-form";
 import FormInput from "@/components/Input/FormInput";
 import FormRow from "@/components/Input/FormRow";
 import FormTextarea from "@/components/Input/FormTextarea";
-import {sendPartnerShipMessage} from "../../../../bots/telegramBot";
+import { sendContactForm } from "@/lib/api";
+import { Button, ChakraProvider, useToast } from "@chakra-ui/react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import styles from "../styles.module.scss";
+import { sendPartnerShipMessage } from "../../../../bots/telegramBot";
 
 export default function PartnershipForm() {
-    const {control, handleSubmit} = useForm();
+    const { control, handleSubmit, reset } = useForm();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const toast = useToast();
+
+
+    const successToats = () => {
+        toast({
+            title: "Your application has been sent successfully",
+            position: "top-right",
+            isClosable: true,
+            status: "success",
+        });
+    };
     const onSubmit = (data) => {
         setLoading(true)
         console.log(data);
         const chatId = '-4110982264';
         const messageText = `Title: Partnership \nName: ${data.name}\nCompany Name: ${data.company_name}\nEmail: ${data.email}\nPhone: ${data.phone}\nPartnership Purpose: ${data.partnership_purpose}`;
         sendPartnerShipMessage(chatId, messageText).then(() => {
+            sendContactForm(data)
             setLoading(false);
+            reset({})
+            successToats()
         }).catch(() => {
             setError('Failed to send message')
             setLoading(false);
@@ -36,7 +50,7 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormInput control={control} name="name"/>
+                    <FormInput control={control} name="name" />
                 </FormRow>
                 <FormRow
                     label="Company Name"
@@ -46,7 +60,7 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormInput control={control} name="company_name"/>
+                    <FormInput control={control} name="company_name" />
                 </FormRow>
                 <FormRow
                     label="Email"
@@ -56,7 +70,7 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormInput control={control} name="email"/>
+                    <FormInput control={control} name="email" />
                 </FormRow>
                 <FormRow
                     label="Phone Number"
@@ -66,7 +80,7 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormInput control={control} name="phone"/>
+                    <FormInput control={control} name="phone" />
                 </FormRow>
                 <FormRow
                     label="How are you interested in partnering with us?"
@@ -76,11 +90,11 @@ export default function PartnershipForm() {
                         marginBottom: "6px",
                     }}
                 >
-                    <FormTextarea control={control} name="partnership_purpose"/>
+                    <FormTextarea control={control} name="partnership_purpose" />
                 </FormRow>
 
                 <Button backgroundColor={'rgb(21, 112, 239)'} color={'white'} width={'full'} type='submit'
-                        padding="12px 18px" isLoading={loading}>Submit</Button>
+                    padding="12px 18px" isLoading={loading}>Submit</Button>
                 {error && <p>{error}</p>}
             </form>
         </ChakraProvider>

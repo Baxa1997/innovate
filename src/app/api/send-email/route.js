@@ -18,7 +18,7 @@ const generateEmailContent = (data) => {
     ""
   );
   const htmlData = Object.entries(data).reduce((str, [key, val]) => {
-    return (str += `<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`);
+    return (str += `<h3 class="form-heading" align="center">${val}, Thank you for your application, we will contact you later</h3>`);
   }, "");
 
   return {
@@ -32,21 +32,20 @@ export async function POST(req, res) {
   const transporter  = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "one393752@gmail.com",
-      pass: "yqemunfzxjlhifgq",
+      user: "ZeroMaxeld7@gmail.com",
+      pass: "fpkxncrhawzmufgk",
     },
   })
-
    const mailOptions = {
-    from: "one393752@gmail.com",
-    to: "one393752@gmail.com",
-    subject: data.subject
+    from: "ZeroMaxeld7@gmail.com",
+    to: data.email,
+    subject: "ZeroMAX ELD"
   };
 
- await transporter.sendMail({
+  await transporter.sendMail({
         ...mailOptions,
-        ...generateEmailContent(data),
-   });
+        ...generateEmailContent({data: data.name}),
+  });
 
   return NextResponse.json({message: "this is post"})
   };
