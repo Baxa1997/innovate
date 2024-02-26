@@ -98,7 +98,7 @@ export default function HeaderContent() {
               <Link href={"/partnership"} className={styles.navLink}>
                 Partnership
               </Link>
-              <Link href={"/#Contact"} className={styles.navLink}>
+              <Link href="/#contact" className={styles.navLink}>
                 Contact
               </Link>
               <Link href={"/download"} className={styles.navLink}>

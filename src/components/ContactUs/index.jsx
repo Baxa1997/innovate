@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function ContactUs() {
   return (
-    <div className={styles.contactus} id="#Contact">
+    <div className={styles.contactus} id="contact">
       <Container>
         <MotionSection>
           <Animation variants={textFadeinDown}>

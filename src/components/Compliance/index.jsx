@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export default function Compliance() {
   return (
-    <div className={styles.compliance}>
+    <div className={styles.compliance} id={'Store'}>
       <Container>
         <MotionSection>
           <Animation variants={textFadeinDown}>

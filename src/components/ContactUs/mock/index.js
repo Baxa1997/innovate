@@ -12,13 +12,13 @@ export const contactUs = [
     link: {title: 'support@zeromaxeld.com',link:"mailto:support@zeromaxeld.com"},
     icon: <ContactMainIcon />,
   },
-  // {
-  //   id: 2,
-  //   title: "Phone",
-  //   text: "Mon-Sat from 8am to 5pm EST",
-  //   link: "+1 (267) 551-4401",
-  //   icon: <ContactPhoneIcon />,
-  // },
+  {
+    id: 2,
+    title: "Phone",
+    text: "Mon-Sat from 8am to 5pm EST",
+    link: {title: '1-717-703-0201',link:"tel:1-717-703-0201"},
+    icon: <ContactPhoneIcon />,
+  },
   {
     id: 3,
     title: "Office",

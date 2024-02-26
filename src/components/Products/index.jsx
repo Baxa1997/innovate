@@ -6,7 +6,7 @@ import { productFadeinDown, textFadeinDown } from "@/utils/constants";
 
 export default function Products() {
   return (
-    <div className={styles.products}>
+    <div className={styles.products} id={'Features'}>
       <Container>
         <MotionSection>
           <Animation variants={textFadeinDown}>
