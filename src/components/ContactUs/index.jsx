@@ -4,10 +4,11 @@ import styles from "./styles.module.scss";
 import { productFadeinDown, textFadeinDown } from "@/utils/constants";
 import { contactUs } from "./mock";
 import ContactUsForm from "./components/ContactUsForm";
+import Link from "next/link";
 
 export default function ContactUs() {
   return (
-    <div className={styles.contactus}>
+    <div className={styles.contactus} id="#Contact">
       <Container>
         <MotionSection>
           <Animation variants={textFadeinDown}>
@@ -45,9 +46,13 @@ export default function ContactUs() {
                       </div>
                     </div>
                     <div className={styles.footer}>
-                      <div className={styles.link}>
-                        <p>{item.link}</p>
-                      </div>
+                      <Link
+                        target="_blank"
+                        href={item.link.link}
+                        className={styles.link}
+                      >
+                        <p>{item.link.title}</p>
+                      </Link>
                     </div>
                   </div>
                 ))}
