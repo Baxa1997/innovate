@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import { Animation, MotionSection } from "@/utils/animation";
-import { fadeinDown, fadeinDownPhone } from "@/utils/constants";
+import {Animation, MotionSection} from "@/utils/animation";
+import {fadeinDown, fadeinDownPhone} from "@/utils/constants";
 import CustomButton from "../CustomButton";
 
 export function Banner() {
@@ -59,7 +59,7 @@ export function Banner() {
                   <div className={styles.admin}>
                     <Image
                       alt="admin_panel"
-                      src="/images/banner_admin_panel.webp"
+                      src="/images/banner_laptop_screen.png"
                       fill={true}
                       loading="lazy"
                     />

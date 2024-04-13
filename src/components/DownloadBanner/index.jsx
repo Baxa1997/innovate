@@ -10,7 +10,7 @@ export default function DownloadBanner() {
                 <div className={styles.downloadCont}>
                     <div className={styles.titleCont}>
                         <h3 className={styles.title}>Download our app</h3>
-                        <p>Blue Star ELD™ delivers an innovative Fleet Management and Electronic Logging system that
+                        <p>Zero Max ELD™ delivers an innovative Fleet Management and Electronic Logging system that
                             empowers
                             carriers and drivers with various advanced features.</p>
                     </div>

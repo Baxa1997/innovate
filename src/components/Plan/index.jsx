@@ -37,7 +37,7 @@ export default function Plan() {
                       <p>Standard plan</p>
                     </div>
                     <div className={styles.head_text}>
-                      <h4>$60/month</h4>
+                      <h4>$75/month</h4>
                     </div>
                   </div>
                 </div>

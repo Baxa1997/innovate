@@ -1,11 +1,4 @@
-import {
-  AppStoreIcon,
-  FaceBookIcon,
-  GooglePlayIcon,
-  InstagramIcon,
-  TelegramIcon,
-  YouTubeIcon,
-} from "@/assets/icons";
+import {AppStoreIcon, FaceBookIcon, GooglePlayIcon, InstagramIcon, TelegramIcon, YouTubeIcon,} from "@/assets/icons";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -72,16 +65,16 @@ export default function Footer() {
                     <p>Legal</p>
                   </div>
                   <div className={styles.link_body}>
-                    <Link href="/" className={styles.link}>
+                    <Link href="/terms" className={styles.link}>
                       Terms
                     </Link>
-                    <Link href="/" className={styles.link}>
+                    <Link href="/privacy" className={styles.link}>
                       Privacy
                     </Link>
-                    <Link href="/" className={styles.link}>
+                    <Link href="/refunds" className={styles.link}>
                       Returns & Refunds
                     </Link>
-                    <Link href="/" className={styles.link}>
+                    <Link href="/warranty" className={styles.link}>
                       Product Warranty
                     </Link>
                   </div>
@@ -109,7 +102,7 @@ export default function Footer() {
           <div className={styles.footer_social}>
             <div className={styles.social_main}>
               <div className={styles.text_box}>
-                <p>© Blue Star ELD™. All rights reserved.</p>
+                <p>© ZeroMAXELD™. All rights reserved.</p>
               </div>
               <div className={styles.icon_box}>
                 <div className={styles.icon_card}>

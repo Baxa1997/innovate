@@ -1,0 +1,44 @@
+.termsWrapper {
+  @include flex-column;
+  padding-top: rem(180);
+  padding-bottom: rem(96);
+  background-color: #f9fafb;
+
+  .container {
+    @include flex-column;
+    @include container;
+    max-width: 768px;
+
+    h1 {
+      font-size: rem(60);
+      line-height: rem(72);
+      font-weight: 600;
+      color: #101828;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      margin-top: rem(16);
+      font-weight: 400;
+      color: #000;
+      font-size: rem(20);
+      line-height: rem(30);
+    }
+
+    .content {
+      margin-top: rem(16);
+      font-weight: 400;
+      font-size: rem(14);
+      line-height: rem(20);
+      color: rgb(71, 84, 103);
+
+      br {
+        display: block;
+        margin-top: rem(14);
+      }
+    }
+  }
+}

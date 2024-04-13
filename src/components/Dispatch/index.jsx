@@ -18,7 +18,7 @@ export default function Dispatch() {
               </div>
               <div className={styles.desc}>
                 <h5 className={styles.text}>
-                  Blue Star ELD allows you to manage your loads quickly and
+                  Zero Max ELD allows you to manage your loads quickly and
                   easily. Our innovative calculation system will provide updates
                   on possible delays for each load based on the vehicle`s
                   current location and streamline your truck routing process by

@@ -8,13 +8,13 @@ export const downloadCont = [
     {
         id: 2,
         link: '#',
-        title: 'Blue Star Driver Android App',
+        title: 'Zero Max Driver Android App',
         className: 'primary',
     },
     {
         id: 3,
         link: '#',
-        title: 'Blue Star Driver iOS App',
+        title: 'Zero Max Driver iOS App',
         className: 'primary',
     },
     {
