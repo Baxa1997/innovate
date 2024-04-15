@@ -1,4 +1,11 @@
-import {AppStoreIcon, FaceBookIcon, GooglePlayIcon, InstagramIcon, TelegramIcon, YouTubeIcon,} from "@/assets/icons";
+import {
+  AppStoreIcon,
+  FaceBookIcon,
+  GooglePlayIcon,
+  InstagramIcon,
+  TelegramIcon,
+  YouTubeIcon,
+} from "@/assets/icons";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +22,7 @@ export default function Footer() {
                 <div className={styles.logo}>
                   <Image
                     alt="logo"
-                    src="/images/logo.png"
+                    src="/images/logo.svg"
                     width={231}
                     height={31}
                   />

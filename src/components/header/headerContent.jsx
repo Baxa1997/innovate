@@ -77,7 +77,7 @@ export default function HeaderContent() {
           <div className={styles.leftSide}>
             <Link href={"/"} className={styles.logoContainer}>
               <Image
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 alt="Vercel Logo"
                 className={styles.logo}
                 width={172}

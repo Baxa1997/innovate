@@ -34,7 +34,7 @@ export const integrationsData = [
     title: "Go Highway",
     text: "Helps brokers identifying carriers",
     image: "/images/integrations/highway.webp",
-    coming_soon: true,
+    coming_soon: false,
   },
   {
     id: 5,
