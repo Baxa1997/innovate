@@ -17,13 +17,13 @@ export default function BurgerContent() {
         <Link href={"/#Store"} className={styles.navLink}>
           Store
         </Link>
-        <Link href={"/#Partnership"} className={styles.navLink}>
+        {/* <Link href={"/#Partnership"} className={styles.navLink}>
           Partnership
-        </Link>
-        <Link href={"/#Contact"} className={styles.navLink}>
+        </Link> */}
+        <Link href={"/#contact"} className={styles.navLink}>
           Contact
         </Link>
-        <Link href={"/#DownloadView"} className={styles.navLink}>
+        <Link href={"/download"} className={styles.navLink}>
           Download
         </Link>
       </nav>
