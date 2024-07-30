@@ -43,10 +43,10 @@ export default function Footer() {
                     <Link href="/" className={styles.link}>
                       Features
                     </Link>
-                    <Link href="/" className={styles.link}>
+                    {/* <Link href="/" className={styles.link}>
                       Store
-                    </Link>
-                    <Link href="/" className={styles.link}>
+                    </Link> */}
+                    <Link href="/partnership" className={styles.link}>
                       Partnership
                     </Link>
                     <Link href="/" className={styles.link}>
@@ -59,7 +59,7 @@ export default function Footer() {
                     <p>Resource</p>
                   </div>
                   <div className={styles.link_body}>
-                    <Link href="/" className={styles.link}>
+                    <Link href="/download" className={styles.link}>
                       Download
                     </Link>
                     <Link href="/" className={styles.link}>
@@ -91,7 +91,7 @@ export default function Footer() {
                     <p>Get the app</p>
                   </div>
                   <div className={styles.link_body}>
-                    <Link href="/" className={styles.link}>
+                    <Link href="https://dl.dropboxusercontent.com/scl/fi/fx7yw8pk693yccwpy6in7/zeromax_release_1.8.11.apk?rlkey=6aorga2yvx48zi21lkg3iucht&st=luur97ic&dl=0" className={styles.link}>
                       <GooglePlayIcon />
                     </Link>
                     <Link href="/" className={styles.link}>
