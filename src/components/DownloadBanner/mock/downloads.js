@@ -7,13 +7,13 @@ export const downloadCont = [
     },
     {
         id: 2,
-        link: 'https://dl.dropboxusercontent.com/scl/fi/fx7yw8pk693yccwpy6in7/zeromax_release_1.8.11.apk?rlkey=6aorga2yvx48zi21lkg3iucht&st=luur97ic&dl=0',
+        link: 'https://play.google.com/store/apps/details?id=app.zeromaxeld.driver&hl=en',
         title: 'Zero Max Driver Android App',
         className: 'primary',
     },
     {
         id: 3,
-        link: '#',
+        link: 'https://apps.apple.com/us/app/zeromax-eld/id6499039660',
         title: 'Zero Max Driver iOS App',
         className: 'primary',
     },

@@ -91,10 +91,10 @@ export default function Footer() {
                     <p>Get the app</p>
                   </div>
                   <div className={styles.link_body}>
-                    <Link href="https://dl.dropboxusercontent.com/scl/fi/fx7yw8pk693yccwpy6in7/zeromax_release_1.8.11.apk?rlkey=6aorga2yvx48zi21lkg3iucht&st=luur97ic&dl=0" className={styles.link}>
+                    <Link href="https://play.google.com/store/apps/details?id=app.zeromaxeld.driver&hl=en" className={styles.link}>
                       <GooglePlayIcon />
                     </Link>
-                    <Link href="/" className={styles.link}>
+                    <Link href="https://apps.apple.com/us/app/zeromax-eld/id6499039660" className={styles.link}>
                       <AppStoreIcon />
                     </Link>
                   </div>

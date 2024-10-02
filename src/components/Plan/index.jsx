@@ -5,6 +5,7 @@ import { productFadeinDown, textFadeinDown } from "@/utils/constants";
 import { CheckIcon, PlanCheckIcon } from "@/assets/icons";
 import CustomButton from "../CustomButton";
 import { planData } from "./mock";
+import Link from "next/link";
 
 export default function Plan() {
   return (
@@ -59,7 +60,13 @@ export default function Plan() {
                 </div>
                 <div className={styles.footer}>
                   <div className={styles.footer_button}>
-                    <CustomButton padding="12px 18px">Get started</CustomButton>
+                    <Link
+                      href="https://app.zeromaxeld.com/"
+                      target="_blank" padding="12px 18px"
+                      className={styles.start_btn}
+                    >
+                      Get started
+                    </Link>
                   </div>
                 </div>
               </div>

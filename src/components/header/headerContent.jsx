@@ -108,12 +108,12 @@ export default function HeaderContent() {
           </div>
           <div className={styles.rightSide}>
             <div className={styles.btn_group}>
-              <CustomButton className={styles.login_button} type="secondary">
+              <Link href="https://app.zeromaxeld.com/" target="_blank" className={styles.login_button} type="secondary">
                 Log in
-              </CustomButton>
-              <CustomButton className={styles.signup_button}>
+              </Link>
+              <Link href="https://app.zeromaxeld.com/register" target="_blank" className={styles.signup_button}>
                 Sign up
-              </CustomButton>
+              </Link>
             </div>
             <div
               className={styles.icon_box}

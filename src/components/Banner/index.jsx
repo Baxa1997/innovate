@@ -1,8 +1,9 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import {Animation, MotionSection} from "@/utils/animation";
-import {fadeinDown, fadeinDownPhone} from "@/utils/constants";
+import { Animation, MotionSection } from "@/utils/animation";
+import { fadeinDown, fadeinDownPhone } from "@/utils/constants";
 import CustomButton from "../CustomButton";
+import Link from "next/link";
 
 export function Banner() {
   return (
@@ -19,16 +20,20 @@ export function Banner() {
                 </p>
               </div>
               <div className={styles.btn_group}>
-                <CustomButton
-                  className={styles.signup_button}
+                <Link
+                  href="https://app.zeromaxeld.com/"
+                  target="_blank"
+                  className={styles.order_button}
                   type="secondary"
                   padding="12px 18px"
                 >
                   Order Now
-                </CustomButton>
-                <a className={styles.start_button} padding="12px 18px">
+                </Link>
+                <Link
+                  href="https://app.zeromaxeld.com/"
+                  target="_blank" className={styles.start_button} padding="12px 18px">
                   Get Started
-                </a>
+                </Link>
               </div>
             </Animation>
             <div className={styles.imageBox}>
