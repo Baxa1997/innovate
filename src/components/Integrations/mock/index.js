@@ -29,13 +29,13 @@ export const integrationsData = [
     image: "/images/integrations/tool.webp",
     coming_soon: false,
   },
-  {
-    id: 5,
-    title: "Go Highway",
-    text: "Helps brokers identifying carriers",
-    image: "/images/integrations/highway.webp",
-    coming_soon: false,
-  },
+//  {
+//    id: 5,
+//    title: "Go Highway",
+//    text: "Helps brokers identifying carriers",
+//    image: "/images/integrations/highway.webp",
+//    coming_soon: false,
+//  },
   {
     id: 5,
     title: "Trucker Cloud",
