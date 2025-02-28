@@ -477,6 +477,54 @@ export default function TermsView() {
             provided that we have notified you in writing of the improperly
             filed claim, and you have failed to promptly withdraw the claim.
           </MotionP>
+          <MotionP
+            variants={{
+              ...fadeInUpScaleDown,
+              visible: {
+                ...fadeInUpScaleDown.visible,
+                transition: {
+                  ...fadeInUpScaleDown.visible.transition,
+                  delay: 0.05,
+                },
+              },
+            }}
+          >
+            SMS Terms & Conditions
+          </MotionP>
+          <MotionP
+            variants={{
+              ...fadeInUpScaleDown,
+              visible: {
+                ...fadeInUpScaleDown.visible,
+                transition: {
+                  ...fadeInUpScaleDown.visible.transition,
+                  delay: 0.1,
+                },
+              },
+            }}
+            className={styles.content}
+          >
+            By opting into SMS communications from ZEROMAX ELD, you agree to
+            receive text messages related to our ELD services, compliance
+            updates, promotions, and customer support. These messages may be
+            transactional or marketing-related and are intended to keep you
+            informed about our services. By providing your phone number and
+            opting in, you expressly consent to receive SMS messages from
+            ZEROMAX ELD. Message frequency may vary based on account activity,
+            promotions, or service updates. Standard message and data rates may
+            apply based on your carrier’s plan. You can opt out at any time by
+            replying STOP to any message. Once you opt out, you will no longer
+            receive SMS communications from us. To re-subscribe, you may need to
+            opt in again through our website or customer support. For help,
+            reply HELP or contact us at support@zeromaxeld.com. Our SMS service
+            is available on most major U.S. carriers. However, delivery is
+            subject to your mobile carrier's network availability and
+            conditions. We are not responsible for delayed or undelivered
+            messages due to carrier issues. ZEROMAX ELD reserves the right to
+            update these SMS Terms & Conditions at any time. Changes will be
+            effective upon posting to our website. Continued use of our SMS
+            services constitutes acceptance of the revised terms.
+          </MotionP>
         </div>
       </MotionSection>
       <Footer />

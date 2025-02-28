@@ -228,6 +228,47 @@ export default function PrivacyView() {
             mobile device’s GPS coordinates via the location services on your
             device.
           </MotionP>
+          <MotionP
+            variants={{
+              ...fadeInUpScaleDown,
+              visible: {
+                ...fadeInUpScaleDown.visible,
+                transition: {
+                  ...fadeInUpScaleDown.visible.transition,
+                  delay: 0.55,
+                },
+              },
+            }}
+            className={styles.head}
+          >
+            SMS Privacy Policy
+          </MotionP>
+          <MotionP
+            variants={{
+              ...fadeInUpScaleDown,
+              visible: {
+                ...fadeInUpScaleDown.visible,
+                transition: {
+                  ...fadeInUpScaleDown.visible.transition,
+                  delay: 0.6,
+                },
+              },
+            }}
+            className={styles.content}
+          >
+            At ZEROMAX ELD, we respect your privacy and are committed to
+            protecting your personal information. When you provide your phone
+            number and opt in to receive SMS messages from us, you agree to
+            receive transactional alerts, service updates, and promotional
+            messages related to our ELD platform. We collect your phone number
+            and any information you provide when you opt in to SMS
+            communications. Your number is used only to send relevant updates,
+            alerts, and promotional messages related to ZEROMAX ELD services. We
+            do not share, sell, or rent your SMS consent or phone number to
+            third parties for marketing purposes. You can opt out at any time by
+            replying STOP to any message. Standard messaging rates may apply.
+          </MotionP>
+
           <MotionH1 variants={fadeInUpScaleDown} className={styles.title}>
             How We Share Information with Others
           </MotionH1>
