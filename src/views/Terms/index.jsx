@@ -205,7 +205,7 @@ export default function TermsView() {
             the Drivers Driver Data will be automatically shared with that
             Carrier and with such other parties described above. Please consider
             carefully the parties with whom you choose to connect and what you
-            choose to share. Company’s role in this process is solely to provide
+            choose to share. Companys role in this process is solely to provide
             the Service. You are responsible for anything you share, including
             but not limited to Driver Data, via your use of the Service. For
             clarification purposes, you grant us the necessary licenses to Your
@@ -263,9 +263,9 @@ export default function TermsView() {
             obligations, and all other rights and obligations. General
             Prohibitions. You further agree not to do any of the following: Use
             any Company proprietary information, including Company name, logo,
-            trademark and other intellectual property without Company’s prior
-            written consent; Attempt to breach any of the Company’s or Company’s
-            providers’ or business partners’ security, technological or
+            trademark and other intellectual property without Companys prior
+            written consent; Attempt to breach any of the Companys or Companys
+            providers or business partners security, technological or
             authentication measures intended to protect the Service; Attempt to
             access the Service other than through the software and/or search
             agents provided by Company; Send any unsolicited or unauthorized
@@ -501,7 +501,7 @@ export default function TermsView() {
             opting in, you expressly consent to receive SMS messages from
             ZEROMAX ELD. Message frequency may vary based on account activity,
             promotions, or service updates. Standard message and data rates may
-            apply based on your carrier’s plan. You can opt out at any time by
+            apply based on your carriers plan. You can opt out at any time by
             replying STOP to any message. Once you opt out, you will no longer
             receive SMS communications from us. To re-subscribe, you may need to
             opt in again through our website or customer support. For help,
