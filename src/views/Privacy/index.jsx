@@ -1,8 +1,8 @@
 import Header from "@/components/header";
 import Footer from "@/components/Footer";
 import styles from "./styles.module.scss";
-import { MotionH1, MotionP, MotionSection } from "@/utils/animation";
-import { fadeInUpScaleDown } from "@/utils/constants";
+import {MotionH1, MotionP, MotionSection} from "@/utils/animation";
+import {fadeInUpScaleDown} from "@/utils/constants";
 
 export default function PrivacyView() {
   return (
@@ -23,8 +23,7 @@ export default function PrivacyView() {
                   delay: 0.05,
                 },
               },
-            }}
-          >
+            }}>
             Effective as of January 26, 2024
           </MotionP>
           <MotionP
@@ -38,8 +37,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.content}
-          >
+            className={styles.content}>
             Zero Max ELD Inc takes your privacy very seriously. This Privacy
             Policy applies to the Service (as defined in our Terms of Service).
             Any terms used but not defined in this Privacy Policy have the
@@ -56,8 +54,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.head}
-          >
+            className={styles.head}>
             Information We Collect
           </MotionP>
           <MotionP
@@ -71,13 +68,12 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.content}
-          >
+            className={styles.content}>
             The primary reason we collect information from you is in order to
             provide you with our Service and to facilitate your use of the
             Service. We may collect the following information about you, which
             may include non-public personal information which can be used to
-            identify an individual (`&quot;`Personal Information`&quot;`).
+            identify an individual Personal Information.
           </MotionP>
           <MotionP
             variants={{
@@ -90,8 +86,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.head}
-          >
+            className={styles.head}>
             Account and Profile Information
           </MotionP>
           <MotionP
@@ -105,8 +100,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.content}
-          >
+            className={styles.content}>
             When accessing the Service, you provide us with Your Data and
             Personal Information, including but not limited to your name, mobile
             phone number, email address, mailing address and driver’s license
@@ -127,8 +121,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.head}
-          >
+            className={styles.head}>
             Information Related to Your Use of the Service
           </MotionP>
           <MotionP
@@ -142,8 +135,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.content}
-          >
+            className={styles.content}>
             We automatically collect, record and store certain information
             related to your use of the Service such as:
             <br />
@@ -174,8 +166,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.head}
-          >
+            className={styles.head}>
             Information Sent by Your Mobile Device
           </MotionP>
           <MotionP
@@ -189,8 +180,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.content}
-          >
+            className={styles.content}>
             We collect certain information indirectly from you while you use the
             Service such as information about the device you use, hardware and
             software you use when accessing the Service, and your IP address.
@@ -206,8 +196,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.head}
-          >
+            className={styles.head}>
             Location Information
           </MotionP>
           <MotionP
@@ -221,8 +210,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.content}
-          >
+            className={styles.content}>
             We may collect and store information about your location by
             converting your IP address into a geo- location or by accessing your
             mobile device’s GPS coordinates via the location services on your
@@ -239,8 +227,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.head}
-          >
+            className={styles.head}>
             SMS Privacy Policy
           </MotionP>
           <MotionP
@@ -254,8 +241,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.content}
-          >
+            className={styles.content}>
             At ZEROMAX ELD, we respect your privacy and are committed to
             protecting your personal information. When you provide your phone
             number and opt in to receive SMS messages from us, you agree to
@@ -283,8 +269,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.head}
-          >
+            className={styles.head}>
             To Provide the Service
           </MotionP>
           <MotionP
@@ -298,8 +283,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.content}
-          >
+            className={styles.content}>
             We share information with others in order to provide you with the
             Service, including:
             <br />
@@ -324,8 +308,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.head}
-          >
+            className={styles.head}>
             Our Service Providers
           </MotionP>
           <MotionP
@@ -339,8 +322,7 @@ export default function PrivacyView() {
                 },
               },
             }}
-            className={styles.content}
-          >
+            className={styles.content}>
             We also share information with third parties who provide services to
             us, including various analytics services, that help us monitor the
             performance of the Service and make improvements to the Service
