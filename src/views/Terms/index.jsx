@@ -507,12 +507,12 @@ export default function TermsView() {
             opt in again through our website or customer support. For help,
             reply HELP or contact us at support@zeromaxeld.com. Our SMS service
             is available on most major U.S. carriers. However, delivery is
-            subject to your mobile carrier's network availability and
-            conditions. We are not responsible for delayed or undelivered
-            messages due to carrier issues. ZEROMAX ELD reserves the right to
-            update these SMS Terms & Conditions at any time. Changes will be
-            effective upon posting to our website. Continued use of our SMS
-            services constitutes acceptance of the revised terms.
+            subject to your mobile carriers network availability and conditions.
+            We are not responsible for delayed or undelivered messages due to
+            carrier issues. ZEROMAX ELD reserves the right to update these SMS
+            Terms & Conditions at any time. Changes will be effective upon
+            posting to our website. Continued use of our SMS services
+            constitutes acceptance of the revised terms.
           </MotionP>
         </div>
       </MotionSection>
